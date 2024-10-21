@@ -1,4 +1,6 @@
-function Contact(){
+import React from "react";
+
+function Signup(){
     return(
         <div>
             
@@ -6,4 +8,4 @@ function Contact(){
     )
 }
 
-export default Contact;
+export default Signup;

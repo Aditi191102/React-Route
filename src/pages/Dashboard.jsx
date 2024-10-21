@@ -1,7 +1,9 @@
+import React from "react";
+
 const Dashboard = () => {
     return(
-        <div>
-            Welcome to StudyNotion
+        <div className="flex justify-center items-center text-red-600">
+           <h3 className="font-bold"> Welcome to StudyNotion </h3>
         </div>
     )
 }

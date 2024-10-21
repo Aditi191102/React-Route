@@ -1,6 +1,7 @@
 import Logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
 import {toast} from 'react-hot-toast';
+import "../App.css"
 
 const Navbar = (props) => {
 
@@ -22,26 +23,26 @@ const Navbar = (props) => {
 
 
     return(
-        <div className=" flex justify-evenly bg-black h-14 items-center">
+        <div className="outer">
                 <Link to="/">
                     <img src={Logo} alt="Logo" loading="lazy" width={160} height={32}></img>
                 </Link> 
             
-            <div>
-                <ul  className="flex gap-12 text-white">
-                    <li>
+            <div className="outerlinks">
+                <ul className="pageslinks">
+                    <li >
                         <Link to="/">Home</Link>
                     </li>
-                    <li>
+                    <li >
                         <Link to="/about">About</Link>
                     </li>
-                    <li>
+                    <li >
                         <Link to="/contact">Contact</Link>
                     </li>    
                 </ul>
             </div>
 
-            <div className="flex gap-12 text-white">
+            <div className="pagesbtns">
             {!isLoggedIn &&
                 <Link to='/login'>
                     <button onClick={logInHandler}>Login</button>
