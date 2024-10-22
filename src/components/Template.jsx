@@ -1,7 +1,9 @@
 import React from "react";
 import frameImg from "../assets/frame.png";
+import LoginForm from "./LoginForm";
+import SignupForm from "./SignupForm";
 
-function Template({title, loginDesc, signUpDesc, image, formtype, isLoggedIn }){
+function Template({title, Desc1, Desc2, image, formtype, setIsLoggedIn }){
 
     return(
         <div>
@@ -10,14 +12,14 @@ function Template({title, loginDesc, signUpDesc, image, formtype, isLoggedIn }){
 
                 <div>
                     <p>
-                    <span>{loginDesc}</span>
-                    <span>{signUpDesc}</span>
+                    <span>{Desc1}</span>
+                    <span>{Desc2}</span>
                     </p>
                 </div>
 
                 {
                     formtype === "login" ? 
-                    (<LoginForm/>): 
+                    (<LoginForm setIsLoggedIn={setIsLoggedIn}/>): 
                     (<SignupForm/>)
                 }
 
@@ -33,11 +35,11 @@ function Template({title, loginDesc, signUpDesc, image, formtype, isLoggedIn }){
                 
                 <div>
                     <img src={frameImg}
-                    className="frame">
+                    className="frame" alt="bgFrame">
                     </img>
 
                     <img src={image}
-                        className="students"
+                        className="students" alt="studentsImg"
                     ></img>
                 </div>
             </div>

@@ -45,7 +45,7 @@ const Navbar = (props) => {
             <div className="pagesbtns">
             {!isLoggedIn &&
                 <Link to='/login'>
-                    <button onClick={logInHandler}>Login</button>
+                    <button>Login</button>
                 </Link>
             }
             {!isLoggedIn &&

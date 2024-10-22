@@ -6,24 +6,31 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import Contact from "./pages/Contact";
 
 function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
   return (
     <div>
       
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
       
       <Routes>
+
           <Route path='/' element={<Home/>}></Route>
 
-          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn}/>}></Route>
 
           <Route path='/signup' element={<Signup/>}></Route>
 
           <Route path='/dashboard' element={<Dashboard/>}></Route>
+
+          <Route path='/contact' element={<Contact/>}></Route>
+
       </Routes>
+
     </div>);
 }
 
