@@ -1,10 +1,15 @@
 import React from "react";
+import loginImg from "../assets/signup.png";
+import Template from "../components/Template";
 
-function Signup(){
+function Signup({setIsLoggedIn}){
     return(
-        <div>
+        <Template 
             
-        </div>
+            image={loginImg}
+            
+        >        
+        </Template>
     )
 }
 
