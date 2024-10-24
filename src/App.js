@@ -13,7 +13,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   
   return (
-    <div>
+    <div className="w-screen h-screen bg-richblack-900 flex flex-col">
       
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
       
@@ -23,7 +23,7 @@ function App() {
 
           <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn}/>}></Route>
 
-          <Route path='/signup' element={<Signup/>}></Route>
+          <Route path='/signup' element={<Signup setIsLoggedIn={setIsLoggedIn}/>}></Route>
 
           <Route path='/dashboard' element={<Dashboard/>}></Route>
 

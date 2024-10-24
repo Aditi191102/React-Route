@@ -9,7 +9,7 @@ function Login({setIsLoggedIn}){
             Desc1="Build skills for today, tomorrow, and beyond."
             Desc2="Education to future-proof your career."
             image={loginImg}
-            formtype="login"
+            formtype="Log In"
             setIsLoggedIn={setIsLoggedIn}
         >
             
