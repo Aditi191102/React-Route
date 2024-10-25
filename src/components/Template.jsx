@@ -7,16 +7,16 @@ import { FcGoogle } from "react-icons/fc";
 function Template({title, Desc1, Desc2, image, formtype, setIsLoggedIn }){
 
     return(
-        <div className="flex justify-between w-11/12 max-w-[1160px] py-12 mx-auto gap-x-12 gap-y-0">
+        <div className="flex justify-between w-11/12 max-w-[1160px] mx-auto gap-x-12 gap-y-0 items-center mt-2">
             
-            <div>
+            <div className="w-11/12 max-w-[450px] mt-4">
                 <h1 
-                className="text-richblack-5 font-semibold text-[1.875rem] leading-[2.375rem]">
+                className="text-richblack-5 font-semibold text-[1.475rem] leading-[2.005rem]">
                     {title}
                 </h1>
 
                 <div>
-                    <p className="text-[1.125rem] leading-[1.625rem] mt-4">
+                    <p className="text-[1rem] leading-[1.325rem] mt-4">
                     <span className="text-richblack-100">{Desc1}</span>
                     <br></br>
                     <span className="text-blue-100 italic">{Desc2}</span>
@@ -29,16 +29,16 @@ function Template({title, Desc1, Desc2, image, formtype, setIsLoggedIn }){
                     (<SignupForm setIsLoggedIn={setIsLoggedIn}/>)
                 }
 
-                <div className="flex w-full items-center my-4 gap-x-2">
+                <div className="flex w-full items-center my-4 gap-2">
                     <div className="w-full h-[1px] bg-richblack-700"></div>
-                    <p className="text-richblack-700 font-medium leading-[1.375rem]">
+                    <p className="text-richblack-100 font-medium leading-[1.375rem]">
                         OR
                     </p>
                     <div className="w-full h-[1px] bg-richblack-700"></div>
                 </div>
 
                 <button className="w-full flex justify-center items-center rounded-[8px] 
-                font-medium text-richblack-700 border border-richblack-700 px-[12px] py-[8px] gap-x-2 mt-6">
+                font-medium text-richblack-100 border border-richblack-700 px-[12px] py-[8px] gap-x-2 mt-4 ">
                 <FcGoogle />
                     <p>{formtype} with Google</p>
                 </button>
@@ -48,7 +48,7 @@ function Template({title, Desc1, Desc2, image, formtype, setIsLoggedIn }){
                     <img src={frameImg}
                     className="frame" 
                     alt="bgFrame"
-                    width={558}
+                    width={458}
                     height={504}
                     loading="lazy">
                     </img>
@@ -57,7 +57,7 @@ function Template({title, Desc1, Desc2, image, formtype, setIsLoggedIn }){
                         className="absolute -top-4 right-4" 
                         alt="studentsImg"
                         width={558}
-                        height={490}
+                        height={504}
                         loading="lazy"
                     >                        
                     </img>

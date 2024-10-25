@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
-import Contact from "./pages/Contact";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
 
@@ -19,15 +19,20 @@ function App() {
       
       <Routes>
 
-          <Route path='/' element={<Home/>}></Route>
+          <Route path='/' element={<Home isLoggedIn={isLoggedIn}/>}></Route>
 
           <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn}/>}></Route>
 
           <Route path='/signup' element={<Signup setIsLoggedIn={setIsLoggedIn}/>}></Route>
 
-          <Route path='/dashboard' element={<Dashboard/>}></Route>
+          <Route path='/dashboard' element={
+            <PrivateRoute isLoggedIn={isLoggedIn}>
+              <Dashboard/>
+            </PrivateRoute>
+          }>
+            </Route>
 
-          <Route path='/contact' element={<Contact/>}></Route>
+          
 
       </Routes>
 

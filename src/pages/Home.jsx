@@ -4,7 +4,7 @@ function Home(){
     return (
         <div className=" flex text-white text-3xl items-center justify-center h-full">
             
-           <h1 className="Heading">Home To Home</h1>           
+           <h1 className="Heading">Welcome To Home</h1>           
         </div>
     )
 }

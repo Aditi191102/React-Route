@@ -28,6 +28,7 @@ function LoginForm({setIsLoggedIn}){
         setIsLoggedIn(true);
         toast.success("Logged In Successfully");
         navigate("/dashboard")
+        console.log(formData);
     }
 
     return(
@@ -49,7 +50,7 @@ function LoginForm({setIsLoggedIn}){
                 ></input>
             </label>
 
-            <label className="w-full">
+            <label className="w-full relative">
                 <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                     Password 
                     <sup className="text-pink-200">*</sup>
@@ -65,22 +66,23 @@ function LoginForm({setIsLoggedIn}){
                 >               
                 </input>
 
-                <span onClick={()=> setVisiblePassword((prev)=>!prev)}>
+                <span className="absolute right-3 top-[38px] cursor-pointer"
+                onClick={()=> setVisiblePassword((prev)=>!prev)}>
                     {
                         visiblePassword ? 
-                        (<PiEye />) :
-                        (<PiEyeClosed />)
+                        (<PiEye fontSize={24} fill='#AFB2BF' />) :
+                        (<PiEyeClosed fontSize={24} fill='#AFB2BF'/>)
                     }
                 </span>
                 
                 <Link to="#">
-                    <p>
+                    <p className="text-xs mt-1 text-blue-100 max-w-max ml-auto">
                         Forgot Password
                     </p>
                 </Link>
             </label>
 
-            <button className="w-full px-[12px] py-[8px] bg-yellow-400 rounded-[8px] text-richblack-900">
+            <button className="w-full px-[12px] py-[8px] bg-yellow-400 rounded-[8px] text-richblack-900 mt-6">
                 Log In
             </button>
         </form>
